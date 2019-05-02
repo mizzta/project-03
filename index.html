@@ -5,14 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Instanews</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
-    
-    <h1>Hello World </h1>
-    <h2>It was a typo</h2>
 
-    <script src="./build/js/script.min.js"></script>
+<main class="main-page">
+<img src="images/nyt-logo.svg" class="nyt-logo" alt="NYT-logo">
+<p class="choose-section">Choose a section:</p><br />
+    <select id="dropdown-menu" class="dropdown-menu">
+      <option value=" ">Sections</option>
+      <option value="world">World</option>
+      <option value="business">Business</option>
+      <option value="realestate">Real Estate</option>
+      <option value="travel">Travel</option>
+      <option value="insider">Insider</option>
+      <option value="books">Books</option>
+      <option value="movies">Movies</option>
+      <option value="health">Health</option>
+    </select>
+    <p class="loading">Loading...</p>
+    <div class="storycontentarea">
+        <!-- Articles -->
+    </div>
+    
+
+
+</main>
+
+<footer> 
+    &copy; Copyright 2016 INSTANEWS
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="./build/js/script.min.js"></script>
 
 </body>
 </html>

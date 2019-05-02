@@ -1,3 +1,66 @@
+
+
 body {
-    background: yellowgreen;
+    background: black;
+    font-family: 'OpenSans', 'Times New Roman', Times, serif;
+    font-weight: lighter;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+footer {
+    color: #c2c2c2;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+select {
+    background: #ffffff;
+    font: black;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    min-height: 95vh;
+}
+
+.loading {
+    display: none;
+  }
+
+
+/* Media Queries*/
+/* Tablet */
+@media screen and (min-width: 600px) {
+    .main-page {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width:1000px) {
+    footer {
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 40px;
+    }
+
+    .main-page {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 20px;
+    }
+
+
 }
