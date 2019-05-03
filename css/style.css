@@ -42,10 +42,6 @@ select {
     font: black;
 }
 
-.container {
-    max-width: 100vw;
-}
-
 .choose-section {
     display: flex;
     flex-direction: column;
@@ -60,14 +56,36 @@ select {
     min-height: 95vh;
 }
 
+.article {
+    position: relative;
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7)
+}
 
 /* Media Queries*/
 /* Tablet */
-@media screen and (min-width: 600px) {}
+@media screen and (min-width: 600px) {
+    header {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .storycontentarea {
+        display: block;
+    }
+}
 
 
 /* Desktop */
 @media screen and (min-width:1000px) {
+    header {
+        justify-content: flex-start;
+    }
+
     footer {
         display: flex;
         justify-content: flex-start;
