@@ -307,10 +307,36 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../../assests/fonts/OpenSans-Light.eot");
+  src: url("../../assests/fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../../assests/fonts/OpenSans-Light.woff") format("woff"), url("../../assests/fonts/OpenSans-Light.woff2") format("woff2"), url("../../assests/fonts/OpenSans-Light.ttf") format("truetype"), url("../../assests/fonts/OpenSans-Light.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../../assests/fonts/OpenSansLight-italic.eot");
+  src: url("../../assests/fonts/OpenSans-Light-italic.eot?#iefix") format("embedded-opentype"), url("../../assests/fonts/OpenSans-Light-italic.woff") format("woff"), url("../../assests/fonts/OpenSans-Light-italic.woff2") format("woff2"), url("../../assests/fonts/OpenSans-Light-italic.ttf") format("truetype"), url("../../assests/fonts/OpenSans-Light-italic.svg#robotoregular") format("svg");
+  font-weight: normal;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../../assests/fonts/OpenSans-Bold.eot");
+  src: url("../../assests/fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("../../assests/fonts/OpenSans-Bold.woff") format("woff"), url("../../assests/fonts/OpenSans-Bold.woff2") format("woff2"), url("../../assests/fonts/OpenSans-Bold.ttf") format("truetype"), url("../../assests/fonts/OpenSans-Bold.svg#robotoregular") format("svg");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../../assests/fonts/OpenSans-BoldItalic.eot");
+  src: url("../../assests/fonts/OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../../assests/fonts/OpenSans-BoldItalic.woff") format("woff"), url("../../assests/fonts/OpenSans-BoldItalic.woff2") format("woff2"), url("../../assests/fonts/OpenSans-BoldItalic.ttf") format("truetype"), url("../../assests/fonts/OpenSans-BoldItalic.svg#robotoregular") format("svg");
+  font-weight: bold;
+  font-style: italic; }
+
 * {
   padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
   border: 1px dashed #d7d7d7; }
 
 body {
@@ -366,9 +392,6 @@ select {
 .loading {
   display: none; }
 
-.storycontentarea {
-  min-height: 95vh; }
-
 .article {
   position: relative; }
 
@@ -379,37 +402,3 @@ select {
 
 /* Media Queries*/
 /* Tablet */
-@media screen and (min-width: 600px) {
-  header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row; }
-  .storycontentarea {
-    display: block; } }
-
-/* Desktop */
-@media screen and (min-width: 1000px) {
-  header {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-  footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin-left: 40px; }
-  .main-page {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin-left: 20px; } }
