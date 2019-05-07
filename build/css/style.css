@@ -341,11 +341,28 @@ template {
 
 body {
   background: black;
-  font-family: 'OpenSans', 'Times New Roman', Times, serif;
+  font-family: "OpenSans", "Times New Roman", Times, serif;
   font-weight: lighter;
   font-size: 16px;
   color: #ffffff;
-  min-height: 95vh; }
+  min-height: 100vh; }
+
+.container {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  grid-template-areas: "header header header header" "main main main main main" "footer footer footer footer"; }
+  .container header {
+    grid-column: 1 / -1; }
+  .container main {
+    grid-column: 1 / -1; }
+  .container footer {
+    grid-column: 1 / -1; }
 
 header {
   display: -webkit-box;
@@ -362,43 +379,51 @@ header {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  max-width: 100vw; }
+  max-width: 100vw;
+  height: 100%; }
+  header select {
+    background: #ffffff;
+    font: black; }
+  header .choose-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 200px; }
 
 main {
-  max-width: 100vw; }
+  max-width: 100vw;
+  max-height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover; }
+  main .loading {
+    display: none; }
+  main .storycontentarea {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 100vw; }
+    main .storycontentarea .article {
+      position: relative; }
+    main .storycontentarea figcaption {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      margin: 0;
+      padding: 1rem; }
 
 footer {
   color: #c2c2c2;
   text-align: center;
-  max-width: 100vh; }
+  position: absolute 0;
+  max-width: 100vw; }
+  footer p {
+    display: inline-block; }
 
 img {
   max-width: 100%; }
-
-select {
-  background: #ffffff;
-  font: black; }
-
-.choose-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  max-width: 200px; }
-
-.loading {
-  display: none; }
-
-.article {
-  position: relative; }
-
-.description {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7); }
-
-/* Media Queries*/
-/* Tablet */
