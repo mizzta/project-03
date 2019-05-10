@@ -364,73 +364,100 @@ a {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
-          flex-direction: column;
-  -o-object-fit: cover;
-     object-fit: cover; }
+          flex-direction: column; }
   .container header {
     position: relative;
-    margin-bottom: 20px;
-    padding-top: 7rem;
-    -webkit-box-pack: stretch;
-        -ms-flex-pack: stretch;
-            justify-content: stretch; }
-  .container main .loading {
-    display: none; }
-  .container main .storycontentarea .article {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    min-height: 430px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    margin: 0, auto; }
-  .container main .storycontentarea .description {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 1rem;
-    margin: 0, auto;
+    margin-top: 50%;
+    margin-bottom: 50%; }
+  .container .shrink {
+    margin-top: 10%;
     margin-bottom: 0;
-    text-align: left; }
-  .container footer {
-    display: block;
-    justify-items: baseline;
-    -ms-flex-item-align: center;
-        align-self: center;
-    color: #c2c2c2; }
-    .container footer span {
-      text-transform: uppercase; }
+    -webkit-transition: ease-in-out 1s;
+    transition: ease-in-out 1s; }
+    .container .shrink .nyt-logo {
+      max-height: 200px;
+      -webkit-transition: ease-in-out 1s;
+      transition: ease-in-out 1s; }
 
+main .loading {
+  display: none; }
+
+main .storycontentarea .article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 430px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  margin: 0, auto; }
+
+main .storycontentarea .description {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  margin: 0, auto;
+  margin-bottom: 0;
+  text-align: left; }
+
+footer {
+  color: #c2c2c2; }
+  footer span {
+    text-transform: uppercase; }
+
+/* Tablet */
 @media screen and (min-width: 600px) {
-  header {
+  .container header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row; }
-    header .nyt-logo {
-      -webkit-transform: scale(100px);
-              transform: scale(100px); }
-  .storycontentarea {
+            flex-direction: row;
+    margin-left: 28%; }
+    .container header.shrink {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 20%;
+      -webkit-transition: ease-in-out 1s;
+      transition: ease-in-out 1s; }
+      .container header.shrink .nyt-logo {
+        max-height: 150px;
+        -webkit-transform: scale(0.5);
+                transform: scale(0.5);
+        margin-right: 9%; }
+      .container header.shrink .choose-section {
+        margin-top: 25px; }
+  .container .storycontentarea {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
-    grid-template-rows: 25% 25% 25% 25% 25%;
-    -o-object-fit: scale-down;
-       object-fit: scale-down; } }
+    grid-template-rows: 25% 25% 25% 25% 25%; } }
 
 /* Desktop */
 @media screen and (min-width: 1000px) {
-  header {
+  .container header {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
-            justify-content: flex-start; }
-  .storycontentarea {
+            justify-content: flex-start;
+    margin-left: 3%; }
+    .container header.shrink {
+      margin-top: 0px;
+      margin-bottom: 0;
+      margin-left: 0;
+      -webkit-transition: ease-in-out 1s;
+      transition: ease-in-out 1s; }
+      .container header.shrink .nyt-logo {
+        margin-left: 0;
+        margin-right: 2%; }
+  .container .storycontentarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 33.3% 33.3% 33.3%; } }
+    grid-template-rows: 33.3% 33.3% 33.3%; }
+  .container footer {
+    text-align: left;
+    margin-left: 3%; } }

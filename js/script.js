@@ -1,9 +1,7 @@
 $('#dropdown-menu').on('change', function () {
   const selected = $(this).val();
-// ('.nyt-logo').on('change', function(){
-//   $('header').addclass('shrink');
-//   $('main').addclass('grow');
-// });
+  $('header').addClass('shrink');
+  $('main').addClass('grow');
 
   if (selected !== '') {
     console.log('The value you picked is: ' + selected);
@@ -39,4 +37,5 @@ $('#dropdown-menu').on('change', function () {
 
 
   }
+  
 });// end of change event
