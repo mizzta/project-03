@@ -1,6 +1,3 @@
-$main-font-color: #ffffff;
-$font-style: "OpenSans", "Times New Roman", Times, serif;
-$medium-grey-color: #c2c2c2;
 
 * {
   padding: 0;
@@ -25,6 +22,16 @@ a {
   color: $main-font-color;
 }
 
+a:hover .article{
+    // transform: rotateY(180deg) ;
+    transform: scale(1.3);
+    box-shadow: 15px 15px pink;
+    z-index: 999;
+  .description {
+    display: none;
+  }
+  }
+
 // positioning
 .container {
   text-align: center;
@@ -34,7 +41,7 @@ a {
 
   header {
     position: relative;
-    margin-top: 50%;
+    margin-top: 20%;
     margin-bottom: 50%;
   }
   .shrink {
@@ -78,6 +85,10 @@ footer {
   color: $medium-grey-color;
   span {
     text-transform: uppercase;
+  }
+  @mixin tablet {
+
+    
   }
 }
 // Media Query

@@ -354,6 +354,15 @@ img {
 a {
   color: #ffffff; }
 
+a:hover .article {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  -webkit-box-shadow: 15px 15px pink;
+          box-shadow: 15px 15px pink;
+  z-index: 999; }
+  a:hover .article .description {
+    display: none; }
+
 .container {
   text-align: center;
   display: -webkit-box;
@@ -367,7 +376,7 @@ a {
           flex-direction: column; }
   .container header {
     position: relative;
-    margin-top: 50%;
+    margin-top: 20%;
     margin-bottom: 50%; }
   .container .shrink {
     margin-top: 10%;
