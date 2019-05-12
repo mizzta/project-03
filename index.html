@@ -6,43 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Instanews</title>
-    <!-- <link rel="stylesheet" href="./sass/partials/_reset.scss">
-    <link rel="stylesheet" href="fonts.css" type="text/css"> -->
     <link rel="stylesheet" href="./build/css/style.min.css">
+
 </head>
 
 <body>
-<div class="container">
-    <header>
-        <img src="../../assests/images/nyt-logo.svg" class="nyt-logo" alt="NYT-logo">
-        <div class="choose-section">
-            <p>Choose a section:</p>
-            <select id="dropdown-menu" class="dropdown-menu">
-                <option value="">Sections</option>
-                <option value="world">World</option>
-                <option value="business">Business</option>
-                <option value="realestate">Real Estate</option>
-                <option value="travel">Travel</option>
-                <option value="insider">Insider</option>
-                <option value="books">Books</option>
-                <option value="movies">Movies</option>
-                <option value="health">Health</option>
-            </select>
-        </div>
-    </header>
+    <div class="sayhi">
+        <img src="../../assests/images/nytcrosswords.jpeg" class="hello">
+    </div>
+    <div class="container">
+        <header>
+            <img src="../../assests/images/nyt-logo.svg" class="nyt-logo" alt="NYT-logo">
+            <div class="choose-section">
+                <p>Choose a section:</p>
+                <select id="dropdown-menu" class="dropdown-menu">
+                    <option value="">Sections</option>
+                    <option value="world">World</option>
+                    <option value="business">Business</option>
+                    <option value="realestate">Real Estate</option>
+                    <option value="travel">Travel</option>
+                    <option value="insider">Insider</option>
+                    <option value="books">Books</option>
+                    <option value="movies">Movies</option>
+                    <option value="health">Health</option>
+                </select>
 
-    <main class="main-page">
-        <p class="loading">Loading...</p>
-        <div class="storycontentarea">
-            <!-- Articles -->
-        </div>
-    </main>
+            </div>
+        </header>
+        <main class="main-page">
+            <img src="../../assests/images/ajax-loader.gif" alt="Loading" class="loading">
+            <div class="storycontentarea">
+                <!-- Articles -->
+            </div>
+        </main>
 
 
-    <footer>
-        <p>&copy; Copyright 2016 <span>INSTANEWS</span></p>
-    </footer>
-</div>
+        <footer>
+            <p>&copy; Copyright 2016 <span>INSTANEWS</span></p>
+        </footer>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="./build/js/script.min.js"></script>
