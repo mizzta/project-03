@@ -1,43 +1,8 @@
-// add mixins for media queries
 
-$tablet-width: 600px;
-$desktop-width: 1000px;
-
-//put in mixins.scss
 @mixin tablet {
-  @media (min-width: $tablet-width) {
-    header {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .storycontentarea {
-      display: grid;
-    }
-  }
+  @media (min-width: $tablet-width) {@content; }
 }
 
 @mixin desktop {
-  @media (min-width: $desktop-width) {
-    header {
-      justify-content: flex-start;
-    }
-
-    footer {
-      display: flex;
-      justify-content: flex-start;
-      margin-left: 40px;
-    }
-
-    .main-page {
-      display: flex;
-      justify-content: flex-start;
-      margin-left: 20px;
-    }
-
-    .storycontentarea {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-  }
+  @media (min-width: $desktop-width) {@content;}
 }

@@ -335,10 +335,6 @@ template {
   font-weight: bold;
   font-style: italic; }
 
-* {
-  padding: 0;
-  border: 1px dashed #d7d7d7; }
-
 body {
   background: black;
   font-family: "OpenSans", "Times New Roman", Times, serif;
@@ -355,10 +351,10 @@ a {
   color: #ffffff; }
 
 a:hover .article {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-  -webkit-box-shadow: 15px 15px pink;
-          box-shadow: 15px 15px pink;
+  -webkit-transform: scale(1.3) rotatey(180deg);
+          transform: scale(1.3) rotatey(180deg);
+  -webkit-box-shadow: 15px 15px #FFC4CF;
+          box-shadow: 15px 15px #FFC4CF;
   z-index: 999; }
   a:hover .article .description {
     display: none; }
@@ -387,6 +383,44 @@ a:hover .article {
       max-height: 200px;
       -webkit-transition: ease-in-out 1s;
       transition: ease-in-out 1s; }
+  @media (min-width: 600px) {
+    .container header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      margin-left: 28%; }
+      .container header.shrink {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 20%;
+        -webkit-transition: ease-in-out 1s;
+        transition: ease-in-out 1s; }
+        .container header.shrink .nyt-logo {
+          max-height: 150px;
+          -webkit-transform: scale(0.5);
+                  transform: scale(0.5);
+          margin-right: 9%; }
+        .container header.shrink .choose-section {
+          margin-top: 25px; } }
+  @media (min-width: 1000px) {
+    .container header {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      margin-left: 3%; }
+      .container header.shrink {
+        margin-top: 0px;
+        margin-bottom: 0;
+        margin-left: 0;
+        -webkit-transition: ease-in-out 1s;
+        transition: ease-in-out 1s; }
+        .container header.shrink .nyt-logo {
+          margin-left: 0;
+          margin-right: 2%; } }
 
 main .loading {
   display: none; }
@@ -410,63 +444,26 @@ main .storycontentarea .description {
   margin-bottom: 0;
   text-align: left; }
 
-footer {
-  color: #c2c2c2; }
-  footer span {
-    text-transform: uppercase; }
-
-/* Tablet */
-@media screen and (min-width: 600px) {
-  .container header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    margin-left: 28%; }
-    .container header.shrink {
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-left: 20%;
-      -webkit-transition: ease-in-out 1s;
-      transition: ease-in-out 1s; }
-      .container header.shrink .nyt-logo {
-        max-height: 150px;
-        -webkit-transform: scale(0.5);
-                transform: scale(0.5);
-        margin-right: 9%; }
-      .container header.shrink .choose-section {
-        margin-top: 25px; }
-  .container .storycontentarea {
+@media (min-width: 600px) {
+  main .storycontentarea {
     display: grid;
     grid-template-columns: 33.3% 33.3% 33.3%;
     grid-template-rows: 25% 25% 25% 25% 25%; } }
 
-/* Desktop */
-@media screen and (min-width: 1000px) {
-  .container header {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    margin-left: 3%; }
-    .container header.shrink {
-      margin-top: 0px;
-      margin-bottom: 0;
-      margin-left: 0;
-      -webkit-transition: ease-in-out 1s;
-      transition: ease-in-out 1s; }
-      .container header.shrink .nyt-logo {
-        margin-left: 0;
-        margin-right: 2%; }
-  .container .storycontentarea {
+@media (min-width: 1000px) {
+  main .storycontentarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 33.3% 33.3% 33.3%; }
-  .container footer {
-    text-align: left;
-    margin-left: 3%; } }
+    grid-template-rows: 33.3% 33.3% 33.3%; } }
+
+footer {
+  color: #c2c2c2; }
+  footer span {
+    text-transform: uppercase; }
+  @media (min-width: 1000px) {
+    footer {
+      text-align: left;
+      margin-left: 3%; } }

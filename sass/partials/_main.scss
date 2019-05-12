@@ -1,8 +1,7 @@
-
-* {
-  padding: 0;
-  border: 1px dashed #d7d7d7;
-}
+// * {
+//   padding: 0;
+//   border: 1px dashed #d7d7d7;
+// }
 
 body {
   background: black;
@@ -22,15 +21,14 @@ a {
   color: $main-font-color;
 }
 
-a:hover .article{
-    // transform: rotateY(180deg) ;
-    transform: scale(1.3);
-    box-shadow: 15px 15px pink;
-    z-index: 999;
+a:hover .article {
+  transform: scale(1.3) rotatey(180deg);
+  box-shadow: 15px 15px $shadow;
+  z-index: 999;
   .description {
     display: none;
   }
-  }
+}
 
 // positioning
 .container {
@@ -51,6 +49,45 @@ a:hover .article{
     .nyt-logo {
       max-height: 200px;
       transition: ease-in-out 1s;
+    }
+  }
+
+  @include tablet {
+    header {
+      display: flex;
+      flex-direction: row;
+      margin-left: 28%;
+      &.shrink {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 20%;
+        transition: ease-in-out 1s;
+        .nyt-logo {
+          max-height: 150px;
+          transform: scale(0.5);
+          margin-right: 9%;
+        }
+        .choose-section {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    header {
+      justify-content: flex-start;
+      margin-left: 3%;
+      &.shrink {
+        margin-top: 0px;
+        margin-bottom: 0;
+        margin-left: 0;
+        transition: ease-in-out 1s;
+        .nyt-logo {
+          margin-left: 0;
+          margin-right: 2%;
+        }
+      }
     }
   }
 }
@@ -78,6 +115,19 @@ main {
       margin-bottom: 0;
       text-align: left;
     }
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: 33.3% 33.3% 33.3%;
+      grid-template-rows: 25% 25% 25% 25% 25%;
+    }
+
+    @include desktop {
+      display: flex;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 33.3% 33.3% 33.3%;
+    }
   }
 }
 
@@ -86,71 +136,8 @@ footer {
   span {
     text-transform: uppercase;
   }
-  @mixin tablet {
-
-    
-  }
-}
-// Media Query
-/* Tablet */
-@media screen and (min-width: 600px) {
-  .container {
-    header {
-      display: flex;
-      flex-direction: row;
-      margin-left: 28%;
-      &.shrink {
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: 20%;
-        transition: ease-in-out 1s;
-        .nyt-logo {
-          max-height: 150px;
-          transform: scale(0.5);
-          margin-right: 9%;
-        }
-        .choose-section {
-          margin-top: 25px;
-        }
-      }
-    }
-
-    .storycontentarea {
-      display: grid;
-      grid-template-columns: 33.3% 33.3% 33.3%;
-      grid-template-rows: 25% 25% 25% 25% 25%;
-    }
-  }
-}
-
-/* Desktop */
-@media screen and (min-width: 1000px) {
-  .container {
-    header {
-      justify-content: flex-start;
-      margin-left: 3%;
-      &.shrink {
-        margin-top: 0px;
-        margin-bottom: 0;
-        margin-left: 0;
-        transition: ease-in-out 1s;
-        .nyt-logo {
-          margin-left: 0;
-          margin-right: 2%;
-        }
-      }
-    }
-
-    .storycontentarea {
-      display: flex;
-      display: grid;
-      grid-template-columns: 25% 25% 25% 25%;
-      grid-template-rows: 33.3% 33.3% 33.3%;
-    }
-
-    footer {
-      text-align: left;
-      margin-left: 3%;
-    }
+  @include desktop {
+    text-align: left;
+    margin-left: 3%;
   }
 }

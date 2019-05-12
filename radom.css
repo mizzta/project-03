@@ -1,17 +1,63 @@
+// Media Query
+/* Tablet */
+@media screen and (min-width: 600px) {
+  .container {
+    header {
+      display: flex;
+      flex-direction: row;
+      margin-left: 28%;
+      &.shrink {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 20%;
+        transition: ease-in-out 1s;
+        .nyt-logo {
+          max-height: 150px;
+          transform: scale(0.5);
+          margin-right: 9%;
+        }
+        .choose-section {
+          margin-top: 25px;
+        }
+      }
+    }
 
-.storycontentarea {
-  .article {
-    display: flex;
-    min-height: 400px;
-    background-size: cover;
-    position: relative;
-    // margin: 0, auto;
+    .storycontentarea {
+      display: grid;
+      grid-template-columns: 33.3% 33.3% 33.3%;
+      grid-template-rows: 25% 25% 25% 25% 25%;
+    }
   }
-  .description {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 1rem;
-    margin: 0, auto;
+}
+
+/* Desktop */
+@media screen and (min-width: 1000px) {
+  .container {
+    header {
+      justify-content: flex-start;
+      margin-left: 3%;
+      &.shrink {
+        margin-top: 0px;
+        margin-bottom: 0;
+        margin-left: 0;
+        transition: ease-in-out 1s;
+        .nyt-logo {
+          margin-left: 0;
+          margin-right: 2%;
+        }
+      }
+    }
+
+    .storycontentarea {
+      display: flex;
+      display: grid;
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 33.3% 33.3% 33.3%;
+    }
+
+    footer {
+      text-align: left;
+      margin-left: 3%;
+    }
   }
 }
