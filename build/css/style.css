@@ -368,7 +368,10 @@ a:hover .article {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
+          transform: translate(-50%, -50%);
+  opacity: 0.4;
+  -o-object-fit: cover;
+     object-fit: cover; }
 
 .loading {
   height: 100px; }

@@ -37,6 +37,8 @@ a:hover .article {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 0.4;
+  object-fit: cover;
 }
 
 .loading {
