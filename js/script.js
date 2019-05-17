@@ -1,4 +1,5 @@
-$('#dropdown-menu').on('change', function () {
+$(function() {
+  $('#dropdown-menu').on('change', function () {
   const selected = $(this).val();
   $('header').addClass('shrink');
   $('main').addClass('grow');
@@ -42,4 +43,5 @@ $('.documents').ready(function () {
   $('.sayhi').click(function () {
     $('.hello').fadeOut(1500);
   });
+});
 });
