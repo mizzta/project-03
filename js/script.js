@@ -37,9 +37,3 @@ $('#dropdown-menu').on('change', function () {
 
 });// end of change event
 
-// Newspaper Image
-$('.documents').ready(function () {
-  $('.sayhi').click(function () {
-    $('.hello').fadeOut(1500);
-  });
-});
